@@ -1,0 +1,13 @@
+.card{
+    width: 28rem;
+    height: 36rem;
+    border: .1rem solid gray;
+    padding: .7rem;
+    border-radius: .7rem;
+}
+.card-img{
+    width: 100%;
+    object-fit: cover;
+    height: 18rem;
+    border-radius: .5rem;
+}
