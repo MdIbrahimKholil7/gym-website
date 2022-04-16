@@ -1,0 +1,19 @@
+.header{
+    background: rgb(13, 13, 49);
+    height: 8rem;
+    color: white;
+}
+.logo{
+    width: 15rem;
+}
+.ul{
+    display:flex;
+    align-items: center;
+    height: 100%;
+}
+.ul li{
+    list-style-type: none;
+    margin-left: 1.6rem;
+    font-size: 1.7rem;
+    color: #fff;
+}
