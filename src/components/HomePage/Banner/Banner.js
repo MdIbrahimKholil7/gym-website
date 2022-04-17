@@ -35,8 +35,13 @@ const Banner = () => {
                         />
 
                         <Carousel.Caption className='banner-details2'>
-                            <h3>Second slide label</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <div>
+                                <div>
+                                    <h1>Where Amazing  </h1>
+                                    <h1>Fitness Are Made</h1>
+                                </div>
+                                <p>I am a personal trainer.I will help you to gain fit body</p>
+                            </div>
                         </Carousel.Caption>
                     </div>
                 </Carousel.Item>
@@ -49,8 +54,13 @@ const Banner = () => {
                         />
 
                         <Carousel.Caption className='banner-details3'>
-                            <h3>Third slide label</h3>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            <div>
+                                <div>
+                                    <h1>Where Amazing  </h1>
+                                    <h1>Fitness Are Made</h1>
+                                </div>
+                                <p>I am a personal trainer.I will help you to gain fit body</p>
+                            </div>
                         </Carousel.Caption>
                     </div>
                 </Carousel.Item>

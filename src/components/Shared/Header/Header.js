@@ -4,16 +4,23 @@ import { BeakerIcon, MenuIcon, XIcon } from '@heroicons/react/solid'
 import { Container, } from 'react-bootstrap';
 import logo from '../../../images/logo.png'
 import './Header.css'
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
+import { signOut } from 'firebase/auth';
 const Header = () => {
+    const [user]=useAuthState(auth)
     const [open, setOpen] = useState(false)
     const links = [
         { name: 'Home', to: '/', id: 1 },
         { name: 'Blog', to: '/blog', id: 2 },
         { name: 'About', to: '/about', id: 3 },
         { name: 'Contact', to: '/contactus', id: 4 },
-        { name: 'Login', to: '/login', id: 5 },
-        { name: 'Register', to: '/register', id: 6 },
+        
     ]
+
+    const handleSignOut=()=>{
+        signOut(auth)
+    }
     return (
         <div>
             <div className='header'>
@@ -34,6 +41,14 @@ const Header = () => {
                                     )
 
                                 }
+
+                               {
+                                   user?<button onClick={handleSignOut}>Log Out</button>: <div className='d-flex'>
+                                   <li><NavLink className='text-white text-decoration-none' to='/login'>LogIn</NavLink></li>
+                                   <li><NavLink className='text-white text-decoration-none' to='/register'>Register</NavLink></li>
+                               </div>
+
+                               }
                             </ul>
 
 
