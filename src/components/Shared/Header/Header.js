@@ -10,13 +10,13 @@ const Header = () => {
         { name: 'Home', to: '/', id: 1 },
         { name: 'Blog', to: '/blog', id: 2 },
         { name: 'About', to: '/about', id: 3 },
-        { name: 'Contact', to: '/contact', id: 4 },
+        { name: 'Contact', to: '/contactus', id: 4 },
         { name: 'Login', to: '/login', id: 5 },
         { name: 'Register', to: '/register', id: 6 },
     ]
     return (
-        <div className='sticky-header'>
-            <div className='header relative'>
+        <div>
+            <div className='header'>
                 <Container className='h-100'>
                     <header className='d-flex justify-content-between align-items-center h-100'>
                         <div >

@@ -10,6 +10,8 @@ import Blog from './components/Blog/Blog';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import Information from './components/Information/Information';
+import ContactUs from './components/ContactUs/ContactUs';
+import About from './components/About/About';
 function App() {
   return (
     <div className="App">
@@ -17,6 +19,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path='/blog' element={<Blog/>}></Route>
+        <Route path='/about' element={<About/>}/>
+        <Route path='/contactus' element={<ContactUs/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
         <Route path='/information' element={<Information/>}/>
