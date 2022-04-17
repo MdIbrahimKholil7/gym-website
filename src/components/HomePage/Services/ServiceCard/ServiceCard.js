@@ -4,7 +4,7 @@ import './ServiceCard.css'
 const ServiceCard = ({service}) => {
     const [newDetails,setNewDetails]=useState('')
     const [open,setOpen]=useState(false)
-    const {name,desc,img}=service
+    const {name,desc,img,price,id}=service
     const details=desc.length > 70 ? desc.slice(0,73) + '...' :desc
    useEffect(()=>{
     setNewDetails(details)
@@ -28,12 +28,13 @@ const ServiceCard = ({service}) => {
                 </div>
                 <div className='mt-4 pb-5'>
                     <h3 className=''>{name}</h3>
+                    <h4 className='fw-bold'>Price: <span className='price'>${price}</span><span className='fs-5'>/Month</span></h4>
                     <p className='fs-4 my-4'>{newDetails}</p>
                     {
                         open ? <button className='see-btn' onClick={handleShowLess}>ShowLess</button>: showMoreBtn
                     }
                    <div>
-                       <Link className='book-btn' to='/'>Book Now</Link>
+                       <Link  className='book-btn' to={`servicebook/${id}`}>Book Now</Link>
                    </div>
                 </div>
             </div>

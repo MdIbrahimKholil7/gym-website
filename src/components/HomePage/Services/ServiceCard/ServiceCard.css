@@ -13,7 +13,10 @@
     height: 18rem;
     border-radius: .5rem;
 }
-
+.price{
+    color:  #f30a46;
+    font-size: 2.4rem;
+}
 .see-btn {
     border: none;
     color: rgb(49, 140, 197);

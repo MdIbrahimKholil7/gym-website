@@ -1,3 +1,9 @@
+.sticky-header{
+    position: sticky;
+    top: 0;
+   
+    z-index: 44;
+}
 .header{
     background: rgb(13, 13, 49);
     height: 8rem;

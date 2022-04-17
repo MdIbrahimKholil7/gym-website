@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { BeakerIcon, MenuIcon, XIcon } from '@heroicons/react/solid'
 import { Container, NavLink } from 'react-bootstrap';
 import logo from '../../../images/logo.png'
@@ -14,30 +15,32 @@ const Header = () => {
         { name: 'SignUp', to: '/signup', id: 6 },
     ]
     return (
-        <div className='header relative'>
-            <Container className='h-100'>
-                <header className='d-flex justify-content-between align-items-center h-100'>
-                    <div >
-                        <img className="logo" src={logo} alt="" />
-                    </div>
-                    <nav className='h-100 text-white'>
-                        <ul className={`list ${open ? 'ul':'close' }`}>
-                            {links.map(link => <li
-                                key={link.id}
-                            ><NavLink
-                                className='text-white'
-                                to={link.to}>{link.name}</NavLink></li>)}
-                        </ul>
-                    </nav>
-                    <div onClick={() => setOpen(!open)} className='icon'>
-                        {
-                            open ? <XIcon className='menu-icon' /> : <MenuIcon className='menu-icon' />
-                        }
+        <div className='sticky-header'>
+            <div className='header relative'>
+                <Container className='h-100'>
+                    <header className='d-flex justify-content-between align-items-center h-100'>
+                        <div >
+                           <Link to='/'><img className="logo" src={logo} alt="logo" /></Link>
+                        </div>
+                        <nav className='h-100 text-white'>
+                            <ul className={`list ${open ? 'ul' : 'close'}`}>
+                                {links.map(link => <li
+                                    key={link.id}
+                                ><NavLink
+                                    className='text-white'
+                                    to={link.to}>{link.name}</NavLink></li>)}
+                            </ul>
+                        </nav>
+                        <div onClick={() => setOpen(!open)} className='icon'>
+                            {
+                                open ? <XIcon className='menu-icon' /> : <MenuIcon className='menu-icon' />
+                            }
 
-                    </div>
-                </header>
+                        </div>
+                    </header>
 
-            </Container>
+                </Container>
+            </div>
         </div>
     );
 };
