@@ -1,9 +1,9 @@
-.sticky-header{
+/* .sticky-header{
     position: sticky;
     top: 0;
    
     z-index: 44;
-}
+} */
 .header{
     background: rgb(13, 13, 49);
     height: 8rem;
@@ -47,7 +47,7 @@
         top: 8rem;
         left: 0;
         width: 100%;
-        background: rgba(24, 27, 79, 0.671);
+        background: rgba(24, 27, 79, 0.822);
         display: block;
         z-index: 3;
         text-align: center;
