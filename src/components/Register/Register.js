@@ -1,16 +1,19 @@
+
 import React, { useEffect, useRef, useState } from 'react';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Social from '../Social/Social';
 import './Register.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Register = () => {
     const [emailError,setEmailError]=useState({})
     const navigate=useNavigate()
     const emailRef=useRef('')
     const passwordRef=useRef('')
     const confirmPasswordRef=useRef('')
-    const [createUserWithEmailAndPassword,user,loading,error]=useCreateUserWithEmailAndPassword(auth)
+    const [createUserWithEmailAndPassword,user,loading,error]=useCreateUserWithEmailAndPassword(auth,{sendEmailVerification:true})
    useEffect(()=>{
     if(user){
         setEmailError('')
@@ -42,6 +45,7 @@ const Register = () => {
         if(regex && password.length>6){
             setEmailError('')
             createUserWithEmailAndPassword(email,password)
+            toast(<p className='fs-4'>Email verification sent</p>)
         }
         console.log(email)
     }
@@ -69,6 +73,7 @@ const Register = () => {
                     <button className='submit-btn' type='submit'>Register</button>
                     <p className='fs-4 text-center my-5'>Already have an account ? <Link to='/login'>Login</Link></p>
                     <Social/>
+                    <ToastContainer/>
                 </form>
             </div>
         </div>
