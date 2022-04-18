@@ -12,21 +12,26 @@ import Register from './components/Register/Register';
 import Information from './components/Information/Information';
 import ContactUs from './components/ContactUs/ContactUs';
 import About from './components/About/About';
+import RequireAuth from './components/Shared/RequireAuth/RequireAuth';
 function App() {
   return (
     <div className="App">
-      <Header/>
+      <Header />
       <Routes>
-        <Route path='/' element={<Home/>}></Route>
-        <Route path='/blog' element={<Blog/>}></Route>
-        <Route path='/about' element={<About/>}/>
-        <Route path='/contactus' element={<ContactUs/>}/>
-        <Route path='/login' element={<Login/>}/>
-        <Route path='/register' element={<Register/>}/>
-        <Route path='/information' element={<Information/>}/>
-        <Route path='servicebook/:bookId' element={<ServiceBook/>}></Route>
+        <Route path='/' element={<Home />}></Route>
+        <Route path='/blog' element={<RequireAuth>
+          <Blog />
+        </RequireAuth>}></Route>
+        <Route path='/about' element={<About />} />
+        <Route path='/contactus' element={<ContactUs />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/register' element={<Register />} />
+        <Route path='/information' element={<RequireAuth>
+          <Information />
+        </RequireAuth>} />
+        <Route path='servicebook/:bookId' element={<ServiceBook />}></Route>
       </Routes>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

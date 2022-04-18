@@ -54,7 +54,6 @@ const useService = () => {
         setData(details)
         
     }, [])
-    console.log(data)
     return [data, setData]
 }
 

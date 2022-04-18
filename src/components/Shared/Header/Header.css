@@ -29,7 +29,15 @@
     font-size: 1.7rem;
     color: #fff;
 }
-
+.log-btn{
+    border: none;
+    padding: 1.2rem 2rem ;
+    background: rgba(49, 62, 105, 0.845);
+    color: #fff;
+    font-size: 1.7rem;
+    border-radius: 10rem;
+    margin-left: 1rem;
+}
 .menu-icon {
     width: 4rem;
     color: white;
@@ -38,6 +46,8 @@
 .icon {
     display: none;
 }
+
+
 
 @media screen and (max-width:868px) {
     .logo {

@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ServiceCard.css'
@@ -19,7 +20,6 @@ const ServiceCard = ({service}) => {
    }
    const btn=<button className='see-btn' onClick={handleDesc}>See more</button>
    const showMoreBtn=details.length > 69 && btn
-    console.log(service)
     return (
         <div>
             <div className='card'>

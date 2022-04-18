@@ -40,7 +40,24 @@
 .auth-form input::placeholder {
     font-size: 1.6rem;
 }
+.error{
+    color: red;
+    font-size: 1.6rem;
+    
+}
+/* .error::before{
+    content:'x';
+    color: red;
+    font-size: 1.8rem;
+    margin-right: .7rem;
+} */
+.block{
+    display: block;
 
+}
+.closes{
+    display: none;
+}
 .submit-btn {
     width: 100%;
     display: block;
@@ -53,3 +70,4 @@
     padding: 1.3rem 0;
     color: #fff;
 }
+
