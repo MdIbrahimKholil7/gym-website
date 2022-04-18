@@ -13,6 +13,7 @@ import Information from './components/Information/Information';
 import ContactUs from './components/ContactUs/ContactUs';
 import About from './components/About/About';
 import RequireAuth from './components/Shared/RequireAuth/RequireAuth';
+import NotFound from './components/NotFound/NotFound';
 function App() {
   return (
     <div className="App">
@@ -30,6 +31,7 @@ function App() {
           <Information />
         </RequireAuth>} />
         <Route path='servicebook/:bookId' element={<ServiceBook />}></Route>
+        <Route path='*' element={<NotFound/>}/>
       </Routes>
       <Footer />
     </div>
