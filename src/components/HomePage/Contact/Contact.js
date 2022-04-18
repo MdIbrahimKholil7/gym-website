@@ -1,7 +1,9 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import './Contact.css'
 const Contact = () => {
+    const navigate=useNavigate()
     return (
         <div className='contact-container'>
             <Container className='d-flex justify-content-center align-items-center h-100'>
@@ -12,7 +14,7 @@ const Contact = () => {
                         </p>
                     </div>
                     <div className='contact-btn'>
-                        <button className='d-block'>Contact Me</button>
+                        <button onClick={()=>navigate('/contactus')} className='d-block'>Contact Me</button>
                     </div>
                 </section>
             </Container>
