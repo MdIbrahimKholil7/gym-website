@@ -34,7 +34,7 @@ const Header = () => {
                                 {
                                     links.map(link => <li key={link.id}>
                                         <NavLink
-                                            className='text-white text-decoration-none'
+                                            className={({isActive})=> isActive?'active':'active-none text-decoration-none '}
                                             to={link.to}
                                         >{link.name}</NavLink>
                                     </li>
@@ -44,14 +44,11 @@ const Header = () => {
 
                                {
                                    user?<button className='log-btn' onClick={handleSignOut}>Log Out</button>: <div className='d-flex'>
-                                   <li><NavLink className='text-white text-decoration-none' to='/login'>LogIn</NavLink></li>
+                                   <li><NavLink  className='text-white text-decoration-none' to='/login'>LogIn</NavLink></li>
                                    <li><NavLink className='text-white text-decoration-none' to='/register'>Register</NavLink></li>
                                </div>
-
                                }
                             </ul>
-
-
                         </nav>
                         <div onClick={() => setOpen(!open)} className='icon'>
                             {
