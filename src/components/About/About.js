@@ -30,6 +30,7 @@ const About = () => {
                             </div>
                         </div>
                     </div>
+                   
                 </Container>
             </section>
         </div>
