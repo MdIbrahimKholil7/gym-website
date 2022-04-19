@@ -1,10 +1,12 @@
-.sticky-header {
-    position:sticky;
+/* .sticky-header {
+    position:fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 44;
-}
+    margin-bottom: 90px;
+
+} */
 
 .header {
     background: rgb(13, 13, 49);

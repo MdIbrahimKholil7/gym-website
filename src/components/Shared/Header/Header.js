@@ -23,7 +23,7 @@ const Header = () => {
     }
     return (
         <div>
-            <div className='header'>
+            <div className='header sticky-header'>
                 <Container className='h-100'>
                     <header className='d-flex justify-content-between align-items-center h-100'>
                         <div >
