@@ -10,6 +10,7 @@ import { signOut } from 'firebase/auth';
 const Header = () => {
     const [user]=useAuthState(auth)
     const [open, setOpen] = useState(false)
+    // links 
     const links = [
         { name: 'Home', to: '/', id: 1 },
         { name: 'Blog', to: '/blog', id: 2 },
