@@ -55,7 +55,6 @@ const Header = () => {
                             {
                                 open ? <XIcon className='menu-icon' /> : <MenuIcon className='menu-icon' />
                             }
-
                         </div>
                     </header>
 
